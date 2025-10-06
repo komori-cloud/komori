@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer-kun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="timer-container">
+        <h1>Pomodoro Timer-kun</h1>
+        <div id="display" class="timer-display">25:00</div>
+        <div class="controls">
+            <button id="startBtn" class="btn primary">Start Work (25 min)</button>
+            <button id="breakBtn" class="btn secondary">Start Break (5 min)</button>
+            <button id="resetBtn" class="btn tertiary">Reset</button>
+        </div>
+        <p class="status-message" id="statusMessage">Ready to focus!</p>
+        <p class="repeat-status">Endless Repeats: <span id="repeatStatus">ON</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
