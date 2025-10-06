@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient to bottom right, #f0f4f8, #d9e2ec; /* Soft gradient background */
+    background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec); /* Soft gradient background */
     margin: 0;
     color: #333;
 }
@@ -16,7 +16,7 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 90%;
-    max-width: 400px;
+    max-width: 450px; /* Slightly wider to accommodate new controls */
 }
 
 h1 {
@@ -91,4 +91,61 @@ h1 {
 .repeat-status span {
     font-weight: bold;
     color: #4CAF50; /* Green for ON */
+}
+
+/* New styles for minute adjustment controls */
+.time-adjust-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.time-adjust-group label {
+    font-weight: bold;
+    color: #555;
+    font-size: 1em;
+    width: 60px; /* Align labels */
+    text-align: right;
+}
+
+.time-adjust-group input[type="number"] {
+    width: 50px;
+    padding: 8px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+    -moz-appearance: textfield; /* Hide default spin buttons in Firefox */
+}
+
+/* Hide default spin buttons in Webkit browsers (Chrome, Safari) */
+.time-adjust-group input[type="number"]::-webkit-outer-spin-button,
+.time-adjust-group input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.time-adjust-group .adjust-btn {
+    background-color: #607d8b; /* Darker gray for adjust buttons */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Make them round */
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+    line-height: 1; /* Center text vertically */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flex to perfectly center content */
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove padding that might interfere with centering */
+}
+
+.time-adjust-group .adjust-btn:hover {
+    background-color: #455a64;
+    transform: translateY(-1px);
 }

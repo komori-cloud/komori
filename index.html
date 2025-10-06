@@ -10,6 +10,21 @@
     <div class="timer-container">
         <h1>Pomodoro Timer-kun</h1>
         <div id="display" class="timer-display">25:00</div>
+
+        <div class="time-adjust-group">
+            <label for="workTimeInput">Work Min:</label>
+            <button id="adjustWorkDown" class="adjust-btn">-</button>
+            <input type="number" id="workTimeInput" value="25" min="1" max="60">
+            <button id="adjustWorkUp" class="adjust-btn">+</button>
+        </div>
+
+        <div class="time-adjust-group">
+            <label for="breakTimeInput">Break Min:</label>
+            <button id="adjustBreakDown" class="adjust-btn">-</button>
+            <input type="number" id="breakTimeInput" value="5" min="1" max="30">
+            <button id="adjustBreakUp" class="adjust-btn">+</button>
+        </div>
+
         <div class="controls">
             <button id="startBtn" class="btn primary">Start Work (25 min)</button>
             <button id="breakBtn" class="btn secondary">Start Break (5 min)</button>
@@ -18,6 +33,10 @@
         <p class="status-message" id="statusMessage">Ready to focus!</p>
         <p class="repeat-status">Endless Repeats: <span id="repeatStatus">ON</span></p>
     </div>
+
+    <!-- The audio element is not strictly needed if using new Audio() in JS, 
+         but it can be useful for preloading. -->
+    <!-- <audio id="soothingAlarm" src="path/to/your/soothing_alarm.mp3" preload="auto"></audio> -->
 
     <script src="script.js"></script>
 </body>
